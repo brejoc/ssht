@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Author: Jochen Breuer <brejoc@gmail.com>
+# License: The MIT License (MIT)
+# This script will connect to an existing remote tmux session on the
+# target server or open a new one.
+
+if [ -z "$1" ]; then
+    echo "usage: $0 <hostname>";
+    exit 1;
+fi
+$(which ssh) $1 -t "bash -c 'tmux a || tmux'";
+exit $?
