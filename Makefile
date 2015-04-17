@@ -1,7 +1,7 @@
 NAME=ssht
 VERSION:=$(shell git describe --tags `git rev-list --tags --max-count=1`)
 
-.PHONY: all clean package_deb package_rpm prepare brewinstall
+.PHONY: all clean package_deb package_rpm prepare 
 
 all: clean package_deb clean package_rpm package_osx
 
@@ -9,11 +9,6 @@ clean:
 	rm -f ./ssht
 	rm -f *.deb
 	rm -f *.rpm
-
-brewinstall:
-	# only for brew
-	chmod +x ssht
-	cp ./ssht /usr/local/bin/.
 
 prepare:
 	chmod +x ssht
