@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 # Author: Jochen Breuer <brejoc@gmail.com>
 # License: The MIT License (MIT)
@@ -9,5 +9,5 @@ if [ -z "$1" ]; then
     echo "usage: $0 <hostname>";
     exit 1;
 fi
-$(which ssh) $1 -t "bash -c 'tmux a || tmux'";
+$(which ssh) $1 -t "sh -c 'tmux a || tmux'";
 exit $?
