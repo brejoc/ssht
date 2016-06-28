@@ -2,7 +2,7 @@
 
 ssht is a shortcut right into your tmux session on a remote computer.
 
-You can use ssht just like ssh itself. E.g. `ssht root@your_remote_computer.com` will connect you to your remote computer via `ssh`, but instead of simply dropping you to a shell, `ssht` tires to connect you to a running tmux session on the remote computer. If there is no tmux session ssht creates on. No magic, but very handy.
+You can use ssht just like ssh itself. E.g. `ssht root@your_remote_computer.com` will connect you to your remote computer via `ssh`, but instead of simply dropping you to a shell, `ssht` tries to connect you to a running tmux session on the remote computer. If there is no tmux session ssht creates one. No magic, but very handy.
 
 ## Installation on OS X
 
